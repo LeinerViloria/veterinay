@@ -8,6 +8,7 @@ const animalSchema = new mongoose.Schema({
     health:String,
     age:Number,
     type:String,
+    owner:{type:mongoose.Schema.ObjectId, ref:"users"},
     registerDate:{type:Date, default:Date.now}
 });
 
