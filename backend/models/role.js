@@ -1,7 +1,8 @@
 import mongoose from 'mongoose';
 
 const roleSchema = new mongoose.Schema({
-    name:String
+    name:String,
+    registerDate:{type:Date, default:Date.now}
 });
 
 const role = mongoose.model("roles", roleSchema);

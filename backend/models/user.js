@@ -2,8 +2,10 @@ import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
     name:String,
-    birthdate:Date,
-    roleId:{type:mongoose.Schema.ObjectId, ref="roles"}
+    age:Number,
+    roleId:{type:mongoose.Schema.ObjectId, ref:"roles"},
+    registerDate:{type:Date, default:Date.now},
+    dbStatus:Boolean
 });
 
 const user = mongoose.model("users", userSchema);
